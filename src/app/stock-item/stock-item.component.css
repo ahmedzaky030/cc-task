@@ -1,0 +1,35 @@
+.stock-item {
+    width: 250px;
+    height: 225px;
+    border-radius: 15px;
+    background-color: cadetblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 20px 5px;
+}
+
+.stock-item_text{
+    font-weight: bold;
+}
+
+.stock-item .mobile-view{
+    display: inline-block;
+}
+
+.disabled{
+    background-color: gray;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .stock-item {
+        height: 150px;
+    }
+
+    .stock-item .mobile-view{
+        display: none;
+    }
+}

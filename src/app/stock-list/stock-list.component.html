@@ -1,0 +1,5 @@
+<div class="stock-container">
+    <app-stock-item *ngFor="let stock of stockData" [stockDetails]="stock" (OnToggleClicked)="onStockChange($event)" ></app-stock-item>
+</div>
+
+

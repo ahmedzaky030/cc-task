@@ -1,0 +1,9 @@
+<div class="stock-item"  [ngClass]="{'disabled': !stockDetails.isActive}">
+    <h3 class="stock-item_text">{{stockDetails?.price?.shortName }}</h3>
+    <span><label class="stock-item_text">Current Price</label>  {{stockDetails?.price?.regularMarketPrice?.raw | number:'2.0-2' }} {{stockDetails?.price?.currencySymbol }}</span>
+    <span><label class="stock-item_text"> Daily High Price </label> {{stockDetails?.summaryDetail?.dayHigh?.raw| number:'2.0-2' }} {{stockDetails?.price?.currencySymbol }}</span>
+    <span><label class="stock-item_text"> Daily Low Price  </label> {{stockDetails?.summaryDetail?.dayLow?.raw | number:'2.0-2' }} {{stockDetails?.price?.currencySymbol }}</span>
+    <span><label class="mobile-view  stock-item_text"> 52 Week High Price </label> {{stockDetails?.summaryDetail?.fiftyTwoWeekHigh?.raw | number:'2.0-2' }} {{stockDetails?.price?.currencySymbol }}</span>
+    <span><label class="mobile-view stock-item_text"> 52 Week Low Price  </label> {{stockDetails?.summaryDetail?.fiftyTwoWeekLow?.raw | number:'2.0-2' }} {{stockDetails?.price?.currencySymbol }}</span>
+    <mat-slide-toggle (change)="toggleChange($event)" [(ngModel)]="stockDetails.isActive">{{ stockDetails.isActive ? 'ON' : 'OFF'}}</mat-slide-toggle>
+</div>
